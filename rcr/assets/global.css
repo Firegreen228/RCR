@@ -1,0 +1,789 @@
+@font-face {
+    font-family: "OpenSans-Italic";
+    src: url("fonts/OpenSans-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-BoldItalic";
+    src: url("fonts/OpenSans-BoldItalic.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("fonts/OpenSans-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-ExtraBoldItalic";
+    src: url("fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-LightItalic";
+    src: url("fonts/OpenSans-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-SemiBoldItalic";
+    src: url("fonts/OpenSans-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-ExtraBold";
+    src: url("fonts/OpenSans-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("fonts/OpenSans-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans Medium";
+    src: url("fonts/OpenSans-Medium.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background: #292929f7 !important;
+    color: white !important;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar {
+    background: #292929 !important;
+    box-shadow: 0 0 16px #292929;
+}
+.nav-link {
+    font-family: "OpenSans-Light", sans-serif !important;
+    color: #ffffff85 !important;
+    font-size: 16px !important;
+}
+.nav-link:hover {
+    border-bottom: 1px solid #ffffff85;
+}
+.modal {
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #fafafa !important;
+}
+.modal-header {
+    border: none!important;
+}
+.modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 1px solid #78787885;
+    border-bottom: 1px solid #78787885;
+    padding: 15px 0;
+}
+.modal-header {
+    padding: 1rem 1rem 0 !important;
+}
+.modal-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0 1rem !important;
+}
+.formInput {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 10px;
+    color: #404040;
+    font-size: 13px;
+    border: 1px solid #78787885;
+    border-radius: 5px;
+}
+.mainButton {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 10px;
+    font-size: 13px;
+    border: 1px solid #998f6fb0;
+    background-color: #998f6fb0;
+    border-radius: 5px;
+}
+.mainButton:hover {
+    border: 1px solid #78787885;
+    background-color: #78787885;
+}
+.footerBack {
+    background: #292929;
+    box-shadow: 0 0 16px #292929;
+    margin-top: 120px;
+}
+.footer {
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.buttonAuth {
+    cursor: pointer;
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+}
+.buttonAuth:hover {
+    color: #ffffff85;
+    border-bottom: 1px solid #ffffff85;
+}
+.authLink {
+    text-decoration: none;
+}
+.footerIconLink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.footerHelpLink {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footerLinkMain {
+    text-decoration: none;
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    font-size: 15px;
+    font-weight: 600;
+}
+.footerLinkMain:hover {
+    color: #ffffff85;
+    text-decoration: underline;
+}
+.footerLink {
+    text-decoration: none;
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    font-size: 13px;
+}
+.footerLink:hover {
+    color: #ffffff85;
+    text-decoration: underline;
+}
+@media screen and (max-width: 540px) {
+    .footer {
+        justify-content: center;
+    }
+    .footerHelpLink {
+        align-items: center;
+    }
+}
+.section {
+    margin-top: 70px;
+}
+.sectionCatalog {
+    display: flex;
+    gap: 40px;
+}
+.catalogFiltersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 34px 24px;
+    background: rgb(41 41 41);
+    background: linear-gradient(181deg, rgba(41, 41, 41) 35%, rgb(47 47 47) 100%);
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    gap: 13px;
+}
+.card img{
+    transition: 300ms ease;
+    width: 100%;
+    height: 100%;
+    border: medium;
+}
+
+.card:hover > img {
+    -webkit-filter: blur(3px);
+    transition: 300ms ease;
+}
+.cardLink {
+    text-decoration: none;
+}
+.card {
+    position: relative;
+    background: transparent !important;
+    box-shadow: 0 0 16px #292929;
+    border-radius: 0 !important;
+    width: 360px !important;
+    height: 250px !important;
+}
+.cardText {
+    display: flex;
+    justify-content: end;
+    padding: 15px 40px;
+    position: absolute;
+    gap: 6px;
+    width: 100%;
+    height: 100%;
+    background: #61616185;
+}
+.cardTextBrand {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffffc4;
+}
+.cardTextModel {
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 24px;
+    color: #ddd4ba;
+}
+.cardPrice {
+    position: absolute;
+    bottom: 0;
+    background: #b7b09ab3;
+    padding: 8px 16px;
+}
+.cardPriceText {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 16px;
+    color: #494744;
+}
+.priceText {
+    font-family: "OpenSans-Bold", sans-serif;
+    font-size: 16px;
+    color: #494744;
+}
+@media screen and (max-width: 1200px) {
+    .card {
+        max-width: 300px;
+        max-height: 190px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sectionCatalog {
+        flex-direction: column;
+    }
+    .cardContainer {
+        justify-content: center;
+    }
+}
+.sectionSubTitle {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    font-size: 14px;
+}
+.regButtonText {
+    font-size: 14px;
+}
+.sectionTitle {
+    font-family: "OpenSans-Regular", sans-serif;
+    color: #ffffffbf;
+    font-size: 25px;
+}
+.registrationSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.regForm {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+    max-width: 615px;
+}
+.registrationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.registrationFormContainer {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+.registrationFormContainerInput {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-basis: 300px;
+}
+.regFormInput {
+    background: transparent;
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    padding: 5px 15px;
+    border: 1px solid #78787885;
+    border-radius: 5px;
+}
+.regFormInput:focus {
+    outline: 1px solid #898989;
+}
+.checkBoxWrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 10px
+}
+.checkboxLabel {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    font-size: 12px;
+}
+.checkboxLink {
+    color: #ffffff85;
+}
+.checkboxLink:hover {
+    color: #ffffffb0;
+}
+input[type=checkbox] {
+    accent-color: #868166;
+}
+.errorMessage {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #dfdfdf85;
+    background: rgb(136 62 62 / 24%);
+    border-left: 4px solid rgb(136 62 62);
+}
+@media screen and (max-width: 576px) {
+    .registrationFormContainer {
+        flex-direction: column;
+    }
+    .registrationFormContainerInput {
+        flex-basis: auto;
+    }
+}
+.modalText {
+    margin-bottom: 20px;
+}
+.modalLink {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 13px;
+    color: #404040;
+    text-decoration: none;
+}
+.modalLink:hover {
+    text-decoration: underline;
+    color: #404040;
+}
+.inputError {
+    border: 1px solid #883e3e;
+    color: #883e3e;
+}
+.inputError::placeholder {
+    color: #883e3e;
+}
+.inputError:focus {
+    outline: 1px solid #883e3e;
+}
+.catalogLink {
+    color: #ffffff85;
+    text-decoration: none;
+}
+.catalogLink:hover {
+    color: #ffffff85;
+    text-decoration: underline;
+}
+.sectionCarContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.carContainerImage {
+    flex-basis: 550px;
+    box-shadow: 0 0 26px #656565;
+}
+.carImg {
+    object-fit: cover;
+    width: 100%;
+}
+.carContainerDescription {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.descriptionHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.descriptionBody {
+    display: flex;
+    gap: 30px;
+}
+.descriptionBodyData {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.containerDescriptionTitle {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 20px;
+    color: #ffffffbf;
+}
+.descriptionDataText {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 13px;
+    color: #ffffff85;
+}
+.descriptionYear {
+    font-family: "OpenSans-Light", sans-serif;
+    color: rgba(255, 255, 255, 0.83);
+    font-size: 12px;
+}
+.descriptionData {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.83);
+}
+.descriptionDataPrice {
+    font-family: "OpenSans-Regular", sans-serif;
+    font-size: 18px;
+}
+.sectionCar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1022px;
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+.calculatorWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.calculatorInputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.calculatorInput {
+    background: #78787885;
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffff85;
+    padding: 5px 15px;
+    border: 1px solid #78787885;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.calculatorLabel {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #ffffffbf;
+    font-size: 12px;
+}
+.totalPrice {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 14px;
+}
+.calculatorButton {
+    margin-top: 10px;
+}
+.cButton {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+.cButton:hover {
+    color: black;
+}
+@media screen and (max-width: 1000px) {
+    .sectionCarContainer {
+        flex-direction: column;
+        max-width: 700px;
+    }
+    .carContainerImage {
+        flex-basis: auto;
+    }
+}
+.headerRating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.color-gold {
+    color: #a29879;
+}
+.sectionCarReviews {
+    margin-top: 40px;
+}
+.sectionCarReviewsTitle {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 20px;
+    color: #ffffffbf;
+    margin-bottom: 15px;
+}
+.reviewsCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 550px;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: #ffffff4f;
+}
+.reviewsUsername {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 15px;
+    color: #ffffffbf;
+}
+.reviewsText {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 13px;
+    color: #ffffffbf;
+}
+.sectionCarReviews {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.reviewsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.reviewFormElement {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 550px;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: #ffffff4f;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+.reviewFormInput {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 10px;
+    color: #404040;
+    font-size: 13px;
+    border: 1px solid #78787885;
+    border-radius: 5px;
+}
+.sectionCabinet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.cabinetData {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.cabinetWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: #ffffff4f;
+}
+.cabinetDataUsername {
+    font-size: 17px;
+    color: #404040;
+    font-weight: 600;
+    font-family: "OpenSans-Light", sans-serif;
+}
+.cabinetDataText {
+    font-size: 15px;
+    color: #ffffff85;
+    font-family: "OpenSans-Light", sans-serif;
+}
+@media (max-width: 375px) {
+    .cabinetData {
+        flex-direction: column;
+    }
+}
+.cabinetMenu {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+.cabinetMenuItem {
+    list-style: none;
+}
+.cabinetMenuLink {
+    font-family: "OpenSans-Light", sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff85;
+}
+.cabinetMenuLink:hover {
+    color: #837958;
+}
+.cabinetMenuLink.active {
+    color: #837958;
+}
+.cabinetContent {
+    display: none;
+}
+.cabinetContent.active {
+    display: block;
+}
+.profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.reviewCard {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    border-radius: 5px;
+    padding: 8px 20px;
+    background: #ffffff4f;
+    max-width: 450px;
+    height: fit-content;
+}
+.userReviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.warningMarker {
+    background: #cdc19b94;
+    padding: 10px;
+    border-left: 5px solid #beaf82;
+}
+.leaseApplications {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.applicationContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #292929;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 16px #383838;
+}
+.applicationContentLink {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 15px;
+    color: #ffffff85;
+}
+.applicationContentLink:hover {
+    color: #ffffff85;
+}
+.bookingForm {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.containerFormApp {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media screen and (max-width: 375px) {
+    .calculatorWrapperForm {
+        flex-wrap: wrap;
+    }
+    .qwe {
+        display: none;
+    }
+}
+.sectionMainContentWrapper {
+    position: relative;
+}
+.sectionMainImgWrapper {
+    border-radius: 20px;
+}
+.mainImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: contain;
+}
+.sectionMainTextWrapper {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    right: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.mainTitle {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 18px;
+    color: #9f987f;
+    text-wrap: nowrap;
+}
+@media screen and (max-width: 992px) {
+    .sectionMainTextWrapper {
+        top: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .mainImg {
+        display: none;
+    }
+    .sectionMainTextWrapper {
+        position: static;
+    }
+    .mainTitle {
+        text-wrap: wrap;
+    }
+}

@@ -1,0 +1,520 @@
+@font-face {
+    font-family: "OpenSans-Italic";
+    src: url("fonts/OpenSans-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-Regular";
+    src: url("fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-BoldItalic";
+    src: url("fonts/OpenSans-BoldItalic.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("fonts/OpenSans-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-ExtraBoldItalic";
+    src: url("fonts/OpenSans-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-LightItalic";
+    src: url("fonts/OpenSans-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-Bold";
+    src: url("fonts/OpenSans-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-SemiBoldItalic";
+    src: url("fonts/OpenSans-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "OpenSans-ExtraBold";
+    src: url("fonts/OpenSans-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans-Light";
+    src: url("fonts/OpenSans-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Open Sans Medium";
+    src: url("fonts/OpenSans-Medium.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #fafafa;
+}
+.layout {
+    display: flex;
+    min-height: 100vh;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.contentHeader {
+    display: flex;
+    justify-content: end;
+    padding: 8px 150px;
+    box-shadow: 1px 0 14px #1e1e1e52;
+}
+.layoutNavBar {
+    width: 290px;
+    background: #1e1e1e;
+}
+.logoutButton {
+    font-family: "OpenSans-Light", sans-serif;
+    text-decoration: none;
+    border: 1px solid #827575;
+    font-size: 16px;
+    padding: 6px;
+    color: white;
+    border-radius: 6px;
+    background: #827575;
+}
+.logoutButton:hover {
+    background: #5f5656;
+}
+.layoutLogo {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+}
+.listItem {
+    list-style: none;
+    padding: 11px 0;
+}
+.listItem:hover {
+    cursor: pointer;
+    color: #1e1e1e;
+    background: linear-gradient(to right, #1e1e1e99 1%, #7c7c7c61 100%, #000 51%);
+    border-right: 6px solid #827575;
+}
+.layoutList {
+    padding: 0;
+}
+.itemLink {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #fafafa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.activeLink {
+    color: #1e1e1e;
+    background: linear-gradient(to right, #1e1e1e99 1%, #7c7c7c61 100%, #000 51%);
+    border-right: 6px solid #827575;
+}
+.contentWrapper {
+    margin: 30px 50px;
+}
+.contentWrapper:not(:first-child) {
+    display: none;
+}
+.contentRequests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.contentCarsCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.requestCard {
+    padding: 12px 26px;
+    border-radius: 10px;
+    background: white;
+    width: 240px;
+    box-shadow: 1px 0 6px #1e1e1e52;
+}
+.requestCard:hover {
+    box-shadow: 1px 0 6px rgb(12 12 12 / 46%);
+}
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+.cardStatus {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+/*card status*/
+.active {
+    background-color: #6fc16f; /* Зеленый цвет для активной заявки */
+}
+
+.canceled {
+    background-color: #c16f6f; /* Красный цвет для отмененной заявки */
+}
+
+.completed {
+    background-color: gray; /* Серый цвет для завершенной заявки */
+}
+/*card status*/
+.cardTextWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cardData {
+    font-family: "OpenSans-Bold", sans-serif ;
+    color: #404040;
+    font-size: 13px;
+    text-wrap: nowrap;
+}
+.cardText {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 13px;
+    color: #5e5e5e;
+}
+.rejectionReason {
+    margin-top: 10px;
+}
+.cardTextCenter {
+    text-align: end;
+}
+.cancellationReason {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.cardInput {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background: white;
+    width: 215px;
+    margin-bottom: 10px;
+}
+.cardInput:hover {
+    border: 1px solid #404040;
+}
+.cancellationButtonWrapper {
+    display: flex;
+    justify-content: end;
+}
+.cancellationButton {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 3px 7px;
+    font-size: 11px;
+    border: 1px solid #5b5b5b;
+    background: #5b5b5b;
+    color: white;
+}
+.cancellationButton:hover {
+    border: 1px solid #404040;
+    background: #404040;
+}
+.contentTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.contentMainTitle {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 21px;
+    color: #1e1e1e;
+}
+.contentSubTitle {
+    font-family: "OpenSans-Light", sans-serif;
+    font-size: 13px;
+    color: #5e5e5e;
+}
+.filterWrapper {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+.searchWrapper {
+    width: 100%;
+}
+.searchInput {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background: white;
+    width: 100%;
+}
+.searchInput:hover {
+    border: 1px solid #404040;
+}
+.statusFilterSelect {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 12px;
+    border: 1px solid #909090;
+    background: white;
+    border-radius: 4px;
+}
+.statusFilterSelect:hover {
+    border: 1px solid #404040;
+}
+.cardButtonWrapper {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
+.cardButton {
+    font-family: "OpenSans-Light", sans-serif;
+    text-decoration: none;
+    border: 1px solid #827575;
+    font-size: 13px;
+    padding: 4px 14px;
+    color: white;
+    border-radius: 6px;
+    background: #827575;
+}
+.cardButton:hover {
+    background: #5f5656;
+}
+.carCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 26px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 0 6px #1e1e1e52;
+}
+.carCard:hover {
+    box-shadow: 1px 0 6px rgb(12 12 12 / 46%);
+}
+.carCardTitle {
+    font-family: "OpenSans-Bold", sans-serif ;
+    color: #404040;
+    font-size: 16px;
+    text-wrap: nowrap;
+    margin-bottom: 13px;
+}
+.carCardDate {
+    display: flex;
+    gap: 10px;
+}
+.carCardDateMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.carCarsPhoto {
+    border-radius: 10px 0 0 10px;
+}
+.editCarSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.carFormInput {
+    display: flex;
+    flex-direction: column;
+}
+.backButton {
+    font-size: 13px;
+}
+.formInput {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 5px 12px;
+    border: 1px solid #909090;
+    border-radius: 4px;
+    background: white;
+}
+.formInput:hover {
+    border: 1px solid #404040;
+
+}
+.carForm {
+    margin-bottom: 18px;
+}
+
+/*table styles*/
+.container {
+    font-family: "OpenSans-Light", sans-serif;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.responsive-table {
+    li {
+        border-radius: 3px;
+        padding: 17px 22px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+    .table-header {
+        background-color: #5f5656;
+        color: white;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    .table-row {
+        background-color: #ffffff;
+        font-size: 12px;
+        color: #404040;
+        box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    }
+    .table-row:hover {
+        box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 38%);
+    }
+    .col-1 {
+        flex-basis: 10%;
+    }
+    .col-2 {
+        flex-basis: 40%;
+    }
+    .col-3 {
+        flex-basis: 25%;
+    }
+    .col-4 {
+        flex-basis: 25%;
+    }
+
+    @media all and (max-width: 767px) {
+        .table-header {
+            display: none;
+        }
+        .table-row{
+
+        }
+        li {
+            display: block;
+        }
+        .col {
+
+            flex-basis: 100%;
+
+        }
+        .col {
+            display: flex;
+            padding: 10px 0;
+            &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+    }
+}
+/*table styles*/
+.deleteButton {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.deleteButton:hover {
+    border-bottom: 1px solid #404040;
+}
+.addCarButton {
+    font-size: 16px;
+}
+
+.addCarSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addCarForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #82757554;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.addCarForm:hover {
+    box-shadow: 0px 0px 9px 0px rgb(0 0 0 / 23%);
+}
+.addCarButtonPhoto {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #5e5e5e;
+    font-size: 13px;
+}
+.addCarButtonPhoto::file-selector-button {
+    font-family: "OpenSans-Light", sans-serif;
+    padding: 3px 7px;
+    font-size: 14px;
+    border: 1px solid #5b5b5b;
+    background: #5b5b5b;
+    color: white;
+}
+.addCarButtonPhoto::file-selector-button:hover {
+    border: 1px solid #404040;
+    background: #404040;
+}
+.addCarWrapper {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+.carFormInputWrapper {
+    margin-bottom: 13px;
+}
+.carFormLabel {
+    font-family: "OpenSans-Light", sans-serif;
+    color: #5e5e5e;
+    font-size: 13px;
+}
+.buttonCarForm {
+    padding: 9px 15px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+.cardDataText {
+text-wrap: wrap ;
+}
